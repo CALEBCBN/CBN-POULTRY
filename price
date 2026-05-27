@@ -1,0 +1,34 @@
+<section style="padding:40px; background:#f4f4f4; text-align:center;">
+  <h2 style="color:#2e7d32;">Our Chicken Prices</h2>
+  
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
+    
+    <!-- Dressed Chicken -->
+    <div style="background:white; padding:20px; border-radius:10px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      <h3>Dressed Chicken</h3>
+      <p style="font-size:20px; color:#2e7d32;"><strong>MK 22,000</strong></p>
+      <p>Cleaned and ready to cook</p>
+    </div>
+
+    <!-- Undressed Chicken -->
+    <div style="background:white; padding:20px; border-radius:10px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      <h3>Undressed Chicken</h3>
+      <p style="font-size:20px; color:#2e7d32;"><strong>MK 25,000</strong></p>
+      <p>Live or whole chicken</p>
+    </div>
+
+    <!-- Bulk Offer -->
+    <div style="background:#2e7d32; color:white; padding:20px; border-radius:10px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      <h3>Bulk Offer</h3>
+      <p style="font-size:20px;"><strong>MK 21,000 each</strong></p>
+      <p>For orders above 5 chickens</p>
+    </div>
+
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/265XXXXXXXXX" target="_blank" 
+     style="display:inline-block; margin-top:30px; padding:15px 25px; background:#25D366; color:white; text-decoration:none; border-radius:8px; font-weight:bold;">
+     Order Now on WhatsApp
+  </a>
+</section>
