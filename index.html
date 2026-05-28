@@ -8,11 +8,17 @@
 
 <style>
 
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:'Segoe UI', sans-serif;
     background:#f4f4f4;
     color:#222;
+    line-height:1.6;
 }
 
 /* HERO SECTION */
@@ -27,24 +33,24 @@ body{
 
     color:white;
     text-align:center;
-    padding:100px 20px;
+    padding:120px 20px;
 }
 
 .hero h1{
-    font-size:50px;
-    margin-bottom:10px;
+    font-size:55px;
+    margin-bottom:15px;
 }
 
 .hero p{
-    font-size:20px;
-    margin-bottom:25px;
+    font-size:22px;
+    margin-bottom:30px;
 }
 
 /* BUTTON */
 
 .btn{
     display:inline-block;
-    padding:14px 30px;
+    padding:15px 35px;
     background:#00c853;
     color:white;
     text-decoration:none;
@@ -55,43 +61,54 @@ body{
 
 .btn:hover{
     background:#009624;
+    transform:scale(1.05);
 }
 
 /* NAVIGATION */
 
 nav{
     background:#111;
-    padding:15px;
+    padding:18px;
     text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 nav a{
     color:white;
-    margin:0 15px;
+    margin:0 18px;
     text-decoration:none;
     font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00c853;
 }
 
 /* GENERAL SECTION */
 
 .section{
-    padding:60px 20px;
+    padding:70px 20px;
     text-align:center;
 }
 
 .section h2{
     color:#2e7d32;
-    font-size:36px;
-    margin-bottom:15px;
+    font-size:40px;
+    margin-bottom:20px;
 }
 
 /* PRODUCTS GRID */
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
     gap:25px;
     padding:20px;
+    max-width:1200px;
+    margin:auto;
 }
 
 /* PRODUCT CARD */
@@ -101,25 +118,37 @@ nav a{
     padding:20px;
     border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
 }
 
 .card img{
     width:100%;
-    height:220px;
+    height:240px;
     object-fit:cover;
     border-radius:10px;
 }
 
 .card h3{
     margin-top:15px;
+    margin-bottom:10px;
 }
 
 /* PRICE SECTION */
 
 .price-section{
-    padding:60px 20px;
+    padding:70px 20px;
     background:#ffffff;
     text-align:center;
+}
+
+.price-section h2{
+    color:#2e7d32;
+    font-size:40px;
+    margin-bottom:15px;
 }
 
 .price-grid{
@@ -127,23 +156,37 @@ nav a{
     justify-content:center;
     gap:25px;
     flex-wrap:wrap;
-    margin-top:40px;
+    margin-top:45px;
 }
 
 .price-card{
     background:white;
     padding:30px;
     border-radius:15px;
-    width:280px;
+    width:320px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.price-card:hover{
+    transform:translateY(-8px);
+}
+
+.price-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
 }
 
 .price-card h3{
     color:#222;
+    margin-bottom:10px;
 }
 
 .price{
-    font-size:32px;
+    font-size:34px;
     color:#2e7d32;
     margin:15px 0;
     font-weight:bold;
@@ -158,13 +201,25 @@ nav a{
     color:white;
 }
 
+/* CONTACT SECTION */
+
+.contact-box{
+    background:white;
+    max-width:700px;
+    margin:auto;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
 /* FOOTER */
 
 footer{
     background:#111;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
+    margin-top:40px;
 }
 
 </style>
@@ -172,18 +227,22 @@ footer{
 
 <body>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 
 <div class="hero">
 
     <h1>CBN POULTRY</h1>
 
     <p>
-        Fully Grown Broiler Chickens • Fresh • Ready for Consumption
+        Fully Grown Broiler Chickens • Fresh • Healthy • Ready for Consumption
     </p>
 
-    <a class="btn" href="https://wa.me/265883689015">
-        Order Now on WhatsApp
+    <a class="btn"
+       href="https://wa.me/265883689015"
+       target="_blank">
+
+       📞 Order Now on WhatsApp
+
     </a>
 
 </div>
@@ -205,9 +264,13 @@ footer{
 
     <h2>About Us</h2>
 
-    <p>
-        We specialize in fully grown broiler chickens ready for slaughter and consumption.
-        Our chickens are healthy, well-fed, and raised under proper care to ensure high quality meat.
+    <p style="max-width:900px; margin:auto; font-size:18px;">
+
+        CBN POULTRY specializes in raising healthy and fully grown broiler chickens
+        for homes, restaurants, events, butcheries, and bulk buyers.
+        We focus on quality feeding, hygiene, and customer satisfaction to ensure
+        fresh and high-quality poultry products every day.
+
     </p>
 
 </div>
@@ -216,42 +279,50 @@ footer{
 
 <div class="section">
 
-    <h2>Our Broilers</h2>
+    <h2>Our Broiler Products</h2>
 
     <div class="grid">
 
+        <!-- PRODUCT 1 -->
+
         <div class="card">
 
-            <img src="broilers.jpg">
+            <img src="broilers.jpg" alt="Broiler Chickens">
 
             <h3>Market Ready Chickens</h3>
 
             <p>
-                Fully grown broilers ready for sale and cooking.
+                Fully grown broiler chickens ready for cooking,
+                selling, and consumption.
             </p>
 
         </div>
 
+        <!-- PRODUCT 2 -->
+
         <div class="card">
 
-            <img src="broilers2.jpg">
+            <img src="broilers2.jpg" alt="Healthy Broilers">
 
             <h3>Healthy & Well Fed</h3>
 
             <p>
-                Raised with proper feeding and hygiene.
+                Raised under proper hygiene and feeding programs
+                for quality meat production.
             </p>
 
         </div>
 
+        <!-- PRODUCT 3 -->
+
         <div class="card">
 
-            <img src="chicks.jpg">
+            <img src="chicks.jpg" alt="Strong Chicks">
 
             <h3>Strong Chicks</h3>
 
             <p>
-                Available for poultry farmers.
+                Healthy chicks available for poultry farmers and starter projects.
             </p>
 
         </div>
@@ -266,15 +337,17 @@ footer{
 
     <h2>Our Chicken Prices</h2>
 
-    <p>
+    <p style="font-size:18px;">
         Fresh, healthy, and affordable poultry products
     </p>
 
     <div class="price-grid">
 
-        <!-- Dressed Chicken -->
+        <!-- DRESSED CHICKEN -->
 
         <div class="price-card">
+
+            <img src="Dressed Chichen.jpg" alt="Dressed Chicken">
 
             <h3>Dressed Chicken</h3>
 
@@ -283,14 +356,16 @@ footer{
             </p>
 
             <p>
-                Cleaned, fresh, and ready for cooking
+                Cleaned, fresh, and ready for cooking.
             </p>
 
         </div>
 
-        <!-- Live Chicken -->
+        <!-- LIVE CHICKEN -->
 
         <div class="price-card">
+
+            <img src="Live Chicken.jpg" alt="Live Chicken">
 
             <h3>Live Chicken</h3>
 
@@ -299,14 +374,16 @@ footer{
             </p>
 
             <p>
-                Healthy live broiler chicken
+                Healthy live broiler chicken ready for sale.
             </p>
 
         </div>
 
-        <!-- Bulk Orders -->
+        <!-- BULK ORDERS -->
 
         <div class="price-card bulk">
+
+            <img src="Bulky Order.jpg" alt="Bulk Orders">
 
             <h3>Bulk Orders</h3>
 
@@ -315,19 +392,20 @@ footer{
             </p>
 
             <p>
-                Special price for orders above 5 chickens
+                Special price available for orders above 5 chickens.
             </p>
 
         </div>
 
     </div>
 
-    <a class="btn"
+    <br><br>
 
+    <a class="btn"
        href="https://wa.me/265883689015"
        target="_blank">
 
-       📞 Order Now on WhatsApp
+       📞 Place Your Order Now
 
     </a>
 
@@ -339,13 +417,17 @@ footer{
 
     <h2>Contact Us</h2>
 
-    <p>
-        📞 0883 689 015 | 0992 606 355
-    </p>
+    <div class="contact-box">
 
-    <p>
-        📍 Along michiru Road, Blantyre, Malawi
-    </p>
+        <p style="font-size:20px; margin-bottom:15px;">
+            📞 0883 689 015 | 0992 606 355
+        </p>
+
+        <p style="font-size:18px;">
+            📍 Along Michiru Road, Blantyre, Malawi
+        </p>
+
+    </div>
 
 </div>
 
@@ -354,7 +436,7 @@ footer{
 <footer>
 
     <p>
-        © 2026 CBN POULTRY
+        © 2026 CBN POULTRY — All Rights Reserved
     </p>
 
 </footer>
